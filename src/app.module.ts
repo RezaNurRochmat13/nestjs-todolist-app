@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TodoModule } from './todo/todo.module';
+import { Todo } from './todo/entities/todo.entity';
 
 @Module({
   imports: [
@@ -12,7 +13,7 @@ import { TodoModule } from './todo/todo.module';
       port: 5432,
       username: 'anakkucing',
       password: 'anakkucing',
-      entities: [],
+      entities: [Todo],
       database: 'todolist',
       synchronize: true,
       logging: true,
